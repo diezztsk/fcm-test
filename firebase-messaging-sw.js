@@ -1,9 +1,18 @@
 importScripts('https://www.gstatic.com/firebasejs/3.6.8/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/3.6.8/firebase-messaging.js');
 
-firebase.initializeApp({
-    messagingSenderId: '612380189990'
-});
+var config = {
+    apiKey: "AIzaSyCjm2-ANL2TmM9-dSR1C4KcDxjWmEzG34s",
+    authDomain: "spinor-dev.firebaseapp.com",
+    databaseURL: "https://spinor-dev.firebaseio.com",
+    projectId: "spinor-dev",
+    storageBucket: "spinor-dev.appspot.com",
+    messagingSenderId: "612380189990"
+};
+
+firebase.initializeApp(config);
+
+
 
 const messaging = firebase.messaging();
 
