@@ -1,6 +1,12 @@
-firebase.initializeApp({
-    messagingSenderId: '612380189990'
-});
+var config = {
+    apiKey: "AIzaSyCjm2-ANL2TmM9-dSR1C4KcDxjWmEzG34s",
+    authDomain: "spinor-dev.firebaseapp.com",
+    databaseURL: "https://spinor-dev.firebaseio.com",
+    projectId: "spinor-dev",
+    storageBucket: "spinor-dev.appspot.com",
+    messagingSenderId: "612380189990"
+};
+firebase.initializeApp(config);
 
 // браузер поддерживает уведомления
 // вообще, эту проверку должна делать библиотека Firebase, но она этого не делает
