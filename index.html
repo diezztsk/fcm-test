@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>FCM - Test</title>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 </head>
 <body>
 <h1>FCM - Web Test</h1>
 <script>
     if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/sw.js').then(function (registration) {
                 // Registration was successful
                 console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
+            }, function (err) {
                 // registration failed :(
                 console.log('ServiceWorker registration failed: ', err);
             });
         });
     }
+
+    var config = {
+        apiKey: "AAAAjpS0JSY:APA91bGiRVKzT0XsU_HJC7pNwWKIKIBa33f7dqLonZzzjxWsA91r4oL7bu7PXFQAxZbQifpYEntTA2P2FffMYJS8xsH6iw0Kj_hThLz--5C_TSgJC2bjchMVjX_BqFSB1Yn7XSKzvAg2",
+        authDomain: "spinor-dev.firebaseapp.com"
+    };
+    firebase.initializeApp(config);
 </script>
 </body>
 </html>
